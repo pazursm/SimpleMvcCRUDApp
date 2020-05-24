@@ -1,57 +1,67 @@
 ﻿@model IEnumerable<SimpleMvcCRUDApp.Models.Product>
 
-<h1>Product List</h1>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Category)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Manufacturer)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Supplier)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Category)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Manufacturer)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Supplier)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <div class="container row p-0 m-0">
+        <div class="col-6">
+            <h2 class="text-info">Product List</h2>
+        </div>
+        <div class="col-3 offset-3">
+            <a asp-action="Upsert" asp-controller="Products" class="btn btn-info form-control text-white">Create New Product</a>
+        </div>
+        <div class="col-12 border p-3">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th width="15%">
+                            @Html.DisplayNameFor(model => model.Name)
+                        </th>
+                        <th width="15%">
+                            @Html.DisplayNameFor(model => model.Description)
+                        </th>
+                        <th width="10%">
+                            @Html.DisplayNameFor(model => model.Category)
+                        </th>
+                        <th width="15%">
+                            @Html.DisplayNameFor(model => model.Manufacturer)
+                        </th>
+                        <th width="15%">
+                            @Html.DisplayNameFor(model => model.Supplier)
+                        </th>
+                        <th width="10%">
+                            @Html.DisplayNameFor(model => model.Price)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Category)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Manufacturer)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Supplier)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Price)
+                            </td>
+                            <td>
+                                <a asp-action="Upsert" asp-route-id="@item.Id" class="btn btn-success">Edit</a> 
+                                &nbsp;
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>

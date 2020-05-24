@@ -21,18 +21,8 @@ namespace SimpleMvcCRUDApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var importDataFromDb = Convert.ToBoolean(Configuration["ImportDataFromDb"]);
-
-            if (importDataFromDb)
-            {
-                services.AddDbContext<ApplicationDbContext>(option => option.UseSqlite(Configuration
-                    .GetConnectionString("DefaultConnection")));
-            }
-            else
-            {
-                //Json file configuration?
-                
-            }
+            services.AddDbContext<ApplicationDbContext>(option => option.UseSqlite(Configuration
+                .GetConnectionString("DefaultConnection")));
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
         }
 
