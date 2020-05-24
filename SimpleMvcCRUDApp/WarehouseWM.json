@@ -1,0 +1,38 @@
+[
+  {
+    "Id": 1,
+    "Name": " Traffic controller RS060",
+    "Description": "output groups with steel\ncabinet",
+    "Price": 2000,
+    "Category": "OTL",
+    "Manufacturer": "Sud Segnal",
+    "Supplier": "OPTO Electronica"
+  },
+  {
+    "Id": 2,
+    "Name": "Blinker",
+    "Description": "Blinker mod. 512 to two outputs",
+    "Price": 45,
+    "Category": "OAT",
+    "Manufacturer": "Sud Segnal",
+    "Supplier": "OPTO Electronica"
+  },
+  {
+    "Id": 3,
+    "Name": "viafalcon SOLAR II",
+    "Description": "Microprocessor controlled radar detektor",
+    "Price": 481.5,
+    "Category": "RAD",
+    "Manufacturer": "via traffic controlling",
+    "Supplier": "via traffic controlling"
+  },
+  {
+    "Id": 4,
+    "Name": "viafalcon SOLAR",
+    "Description": "Microprocessor controlled radar detektor",
+    "Price": 450,
+    "Category": "RAD",
+    "Manufacturer": "via traffic controlling",
+    "Supplier": ""
+  }
+]
