@@ -1,11 +1,12 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SimpleMvcCRUDApp.Models;
-using System;
+using Microsoft.EntityFrameworkCore;
+using SimpleMvcCRUDApp.Data.Models;
+using SimpleMvcCRUDApp.Repositories.Interfaces;
+using SimpleMvcCRUDApp.Repositories.Classes;
 
 namespace SimpleMvcCRUDApp
 {
@@ -21,8 +22,10 @@ namespace SimpleMvcCRUDApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(option => option.UseSqlite(Configuration
+            services.AddDbContext<WarehouseContext>(option => option.UseSqlite(Configuration
                 .GetConnectionString("DefaultConnection")));
+            services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
+            services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
         }
 

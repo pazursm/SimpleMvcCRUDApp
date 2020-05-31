@@ -1,8 +1,8 @@
-﻿@model SimpleMvcCRUDApp.Models.Product
+﻿@model SimpleMvcCRUDApp.Data.Models.Product
 
 <br />
 <h2 class="text-info">
-    @(Model.Id != 0 ? "Edit" : "Create") Product
+    @(Model.Id != 0 ? "Edit" : "Create new") Product
 </h2>
 <br />
 
@@ -33,30 +33,30 @@
         </div>
         <div class="form-group row">
             <div class="col-3">
-                <label asp-for="Category"></label>
+                <label asp-for="CategoryId"></label>
             </div>
             <div class="col-6">
-                <input asp-for="Category" class="form-control" />
+                <input asp-for="CategoryId" class="form-control" />
             </div>
-            <span asp-validation-for="Category" class="text-danger"></span>
+            <span asp-validation-for="CategoryId" class="text-danger"></span>
         </div>
         <div class="form-group row">
             <div class="col-3">
-                <label asp-for="Manufacturer"></label>
+                <label asp-for="ManufacturerId"></label>
             </div>
             <div class="col-6">
-                <input asp-for="Manufacturer" class="form-control" />
+                <input asp-for="ManufacturerId" class="form-control" />
             </div>
-            <span asp-validation-for="Manufacturer" class="text-danger"></span>
+            <span asp-validation-for="ManufacturerId" class="text-danger"></span>
         </div>
         <div class="form-group row">
             <div class="col-3">
-                <label asp-for="Supplier"></label>
+                <label asp-for="SupplierId"></label>
             </div>
             <div class="col-6">
-                <input asp-for="Supplier" class="form-control" />
+                <input asp-for="SupplierId" class="form-control" />
             </div>
-            <span asp-validation-for="Supplier" class="text-danger"></span>
+            <span asp-validation-for="SupplierId" class="text-danger"></span>
         </div>
         <div class="form-group row">
             <div class="col-3">
@@ -81,4 +81,6 @@
 @section Scripts{
     <partial name="_ValidationScriptsPartial" />
 }
+
+
 

@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleMvcCRUDApp", "SimpleMvcCRUDApp\SimpleMvcCRUDApp.csproj", "{DC7DA389-7044-4ED0-B8D2-1AC412E368E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleMvcCRUDApp", "SimpleMvcCRUDApp\SimpleMvcCRUDApp.csproj", "{DC7DA389-7044-4ED0-B8D2-1AC412E368E5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleMvcCRUDApp.Data", "SimpleMvcCRUDApp.Data\SimpleMvcCRUDApp.Data.csproj", "{93B2B039-D6C9-478C-ACFC-64151CD76F34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleMvcCRUDApp.Repositories", "SimpleMvcCRUDApp.Repositories\SimpleMvcCRUDApp.Repositories.csproj", "{76D6780C-12A1-49D7-B5D6-B41038076657}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{DC7DA389-7044-4ED0-B8D2-1AC412E368E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC7DA389-7044-4ED0-B8D2-1AC412E368E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC7DA389-7044-4ED0-B8D2-1AC412E368E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93B2B039-D6C9-478C-ACFC-64151CD76F34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93B2B039-D6C9-478C-ACFC-64151CD76F34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93B2B039-D6C9-478C-ACFC-64151CD76F34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93B2B039-D6C9-478C-ACFC-64151CD76F34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76D6780C-12A1-49D7-B5D6-B41038076657}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76D6780C-12A1-49D7-B5D6-B41038076657}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76D6780C-12A1-49D7-B5D6-B41038076657}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76D6780C-12A1-49D7-B5D6-B41038076657}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
