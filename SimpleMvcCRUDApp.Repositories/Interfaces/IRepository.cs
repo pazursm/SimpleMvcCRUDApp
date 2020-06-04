@@ -7,7 +7,7 @@ namespace SimpleMvcCRUDApp.Repositories.Interfaces
     public interface IRepository<T> where T:class
     {
         IEnumerable<T> GetAll();
-        T GetById(long id);
+        T GetById(int id);
         IEnumerable<T> Find(Expression<Func<T, bool>> predicate);
         
 

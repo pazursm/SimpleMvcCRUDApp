@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace SimpleMvcCRUDApp.Data.Models
 {
@@ -8,8 +9,9 @@ namespace SimpleMvcCRUDApp.Data.Models
         {
             Products = new HashSet<Product>();
         }
-
-        public long Id { get; set; }
+        [Key]
+        public int Id { get; set; }
+        [Required]
         public string Name { get; set; }
         public string Address { get; set; }
         public string City { get; set; }

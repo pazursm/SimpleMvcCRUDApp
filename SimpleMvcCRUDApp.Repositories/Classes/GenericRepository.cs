@@ -24,7 +24,7 @@ namespace SimpleMvcCRUDApp.Repositories.Classes
             return _dbSet.ToList();
         }
 
-        public T GetById(long id)
+        public T GetById(int id)
         {
             var result = _dbSet.Find(id);
             return result;
